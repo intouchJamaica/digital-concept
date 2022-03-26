@@ -1,0 +1,30 @@
+{
+  "name": "digitamedia-concept",
+  "version": "1.0.0",
+  "description": "A concept piece to redesign Designa Media landing page",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malcole123/digita-media-concept.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Malcole123/digita-media-concept/issues"
+  },
+  "homepage": "https://github.com/Malcole123/digita-media-concept#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.19.2",
+    "compression": "^1.7.4",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "node": "^17.7.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0"
+  }
+}

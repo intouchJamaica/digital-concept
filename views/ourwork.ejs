@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7be4f826c0.js" crossorigin="anonymous" defer></script>
+    <link rel="icon" href="https://digitaglobal.com/wp-content/uploads/2016/11/cropped-favicon-2-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="global_css.css">
+    <link rel="stylesheet" href="ourwork.css">
+    <script src="./ourwork.js" defer></script>
+    <title>Designa Media Concept</title>
+</head>
+<body>
+    <%-include('./components/loader.ejs')-%>
+    <section class="our-header">
+      <%-include('./components/navbar.ejs')-%>
+       <div class="narrator">
+        <h1 id="headText">Our Work Speaks For Itself</h1>
+        <div class="narrator-display">
+            <div class="display display-left"></div>
+            <div class="display display-main" id="main-image"></div>
+            <div class="display display-right"></div>
+        </div>
+
+       </div>
+       <div class="container">
+        <div class="carousel">
+          <div class="carousel__face"></div>
+          <div class="carousel__face"></div>
+          <div class="carousel__face"></div>
+          <div class="carousel__face"></div>
+          <div class="carousel__face"></div>
+          <div class="carousel__face"></div>
+          <div class="carousel__face"></div>
+          <div class="carousel__face"></div>
+          <div class="carousel__face"></div>
+        </div>
+      </div>
+    </section>
+    <section class="parallax">
+        <div class="display-one"></div>
+        <div class="display-two"></div> 
+        <div class="display-three"></div>    
+        <div class="display-four"></div>    
+    </section>
+    <section class="web-dev"></section>
+    <section class="web-dev-display"></section>
+    <section class="web-dev-display-2"></section>
+    <section class="we-can-help-you">
+        <div class="we-can-header">
+            <h2>We Can Help You</h2>
+            <div class="upsell-skills">
+                <div class="upsell-card">
+                    <img src="./images/increase-sales.svg" alt="Increase your sales">
+                    <p>Increase your sales</p>
+                </div>
+                <div class="upsell-card">
+                    <img src="./images/increase-presence.svg" alt="Increase your presence">
+                    <p>Increase your presence</p>
+                </div>
+                <div class="upsell-card">
+                    <img src="./images/increase-brand.svg" alt="Increase your brand awareness">
+                    <p>Increase your brand awareness</p>
+                </div>
+            </div>
+        </div>
+        <div class="we-can-body">
+            <h2>Ready to turn idea into reality ?</h2>
+            <button type="button">Get an estimate</button>
+        </div>
+        <div class="we-can-foot">
+            <div class="contact-info">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="#">engage@digitalglobal.com</a>
+            </div>
+            <div class="contact-info">
+                <i class="fa-solid fa-phone"></i>
+                <a href="#">(876)891-9927</a>
+            </div>
+            <div class="contact-info">
+                <i class="fa-solid fa-location-pin"></i>
+                <a href="#">Kingston, Jamaica</a>
+            </div>
+        </div>
+    </section>
+    <div class="min_width">
+        <h3>Screen size warning</h3>
+        <p>Your device is too small for this excercise and hence this may affect the appearance. Please view on a larger device for a better experience.</p>
+        <button type="button" class="ok-button" id="ok-button">Continue</button>
+    </div>
+    <%-include('./components/footer.ejs')-%>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(()=>{
+        $('.menu-button').on('click', ()=>{
+            $('.nav-menu').toggleClass('vertical-menu-open')
+        })
+
+        $('#closeMenu').on('click', ()=>{
+            $('.nav-menu').toggleClass('vertical-menu-open')
+        })
+
+        $('#who-we-are').on('click',()=>{
+            $('#who-we-are-sub').addClass('show-sub-menu')
+        }).on('mouseover', ()=>{
+            $('#who-we-are-sub').addClass('show-sub-menu') 
+        })
+
+        $('#who-we-are-sub').on('mouseleave', ()=>{
+            $('#who-we-are-sub').removeClass('show-sub-menu') 
+        })
+
+        $('#services').on('click',()=>{
+            $('#services-sub').addClass('show-sub-menu')
+        }).on('mouseover', ()=>{
+            $('#services-sub').addClass('show-sub-menu') 
+        })
+
+        $('#services-sub').on('mouseleave', ()=>{
+            $('#services-sub').removeClass('show-sub-menu') 
+        })
+
+        $('.closeSubMenu').on('click', (e)=>{
+            var $targ = $(e.currentTarget).parent();
+            $targ.removeClass('show-sub-menu')
+        })
+
+        var autoScroll;
+
+        $('#scroll-left').on('click', ()=>{
+            var currPos = $('.blogs').scrollLeft();
+            var newPos = currPos -= 120;
+            $('.blogs').scrollLeft(newPos)
+        })
+
+        $('#scroll-right').on('click', ()=>{
+            var currPos = $('.blogs').scrollLeft();
+            var newPos = currPos += 120;
+            $('.blogs').scrollLeft(newPos)
+
+        })
+
+        $(window).on('load', ()=>{
+            setTimeout(()=>{
+                $('.loader').fadeOut()
+            },3000)
+            if($(window).width() < 1080){
+                $('.min_width').css('display','flex')
+            }else{
+                $('.min_width').css('display','none')
+            }
+        }).on('resize', ()=>{
+            if($(window).width() < 1080){
+                $('.min_width').css('display','flex')
+            }else{
+                $('.min_width').css('display','none')
+            }
+        })
+
+        $('#ok-button').on('click', ()=>{
+            $('.min_width').css('display','none')
+        })
+    })
+</script>
+</html>

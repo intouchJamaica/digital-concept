@@ -1,0 +1,352 @@
+.our-header{
+    height:270vh;
+    width:100%;
+    background:var(--main-blue);
+    padding:180px 20px;
+}
+.narrator{
+    width:100%;
+    position:fixed;
+    top:130px;
+    left:50%;
+    transform:translateX(-50%);
+    transition:0.1s ease-in-out;
+}
+
+.narrator-display{
+    width:60%;
+    height:100%;
+    margin:0 auto;
+    position:relative;
+    margin:0 auto;
+    visibility:hidden
+}
+.narrator-display > *{
+    width:15em;
+    height:15em;
+    background:#fff;
+    border-radius:50%;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    transition:1s ease-in-out;
+}
+.display-left{
+    background:url('https://digitaglobal.com/wp-content/uploads/2021/08/Kulture-Kravings-SM-Mockup-6-uai-1440x1440.jpg');
+    background-position:center;
+    background-size:cover;
+}
+.display-right{
+    background:url('https://digitaglobal.com/wp-content/uploads/2021/06/Hustle-SM-Sample-4-uai-1440x1440.jpg');
+    background-position:center;
+    background-size:cover;
+}
+.display-main{
+    background:url('https://digitaglobal.com/wp-content/uploads/2020/10/Cell-4_1.jpg');
+    background-position:center;
+    background-size:cover;
+    z-index:3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:600;
+    font-size:1.1rem;
+}
+
+.animation-one > *:nth-child(1){
+    left:5%;
+}
+.animation-one > *:nth-child(3){
+    left:95%;
+}
+.our-header h1{
+    font-size:4rem;
+    color:#fff;
+    text-align:center;
+    width:40%;
+    margin:0 auto;
+}
+.container {
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+    z-index:3;
+    transform:rotateZ(5deg);
+  }
+  
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.1);
+    display: flex;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url('https://digitaglobal.com/wp-content/uploads/2021/08/Kulture-Kravings-SM-Mockup-8-uai-1440x1440.jpg');
+    background-position:center;
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("https://digitaglobal.com/wp-content/uploads/2017/02/extreme-groceries2.jpg");
+      transform: rotateY( 40deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("https://digitaglobal.com/wp-content/uploads/2019/12/DBJ-Billboard-Mockup-uai-1440x960.jpg");
+    background-size:cover;
+    transform: rotateY( 80deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("https://digitaglobal.com/wp-content/uploads/2019/12/MNS-Bilboard-Mockup-uai-1440x960.jpg");
+    background-size:cover;
+    transform: rotateY(120deg) translateZ(430px);
+ }
+  .carousel__face:nth-child(5) { 
+    background-image: url("https://digitaglobal.com/wp-content/uploads/2017/08/Campari-Red-naughty-uai-1440x1920.jpg");
+    background-position:center;
+   transform: rotateY(160deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("https://digitaglobal.com/wp-content/uploads/2019/06/DBJ-PRINT-AD-2-uai-1440x1794.jpg");
+   transform: rotateY(200deg) translateZ(430px); }
+  .carousel__face:nth-child(7) { 
+    background-image: url("https://digitaglobal.com/wp-content/uploads/2019/12/Newspaper.jpg");
+    background-position:center;
+   transform: rotateY(240deg) translateZ(430px); }
+  .carousel__face:nth-child(8) {
+    background-image: url("https://digitaglobal.com/wp-content/uploads/2021/03/Delite-SM-Sample-5.jpg");
+    transform: rotateY(280deg) translateZ(430px); }
+  .carousel__face:nth-child(9) {
+    background-image: url("https://digitaglobal.com/wp-content/uploads/2017/08/maroonrepublicrecords-header.jpg");
+    background-position:center;
+    transform: rotateY(320deg) translateZ(430px); }
+  
+  
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+  .parallax{
+      width:100%;
+      height:fit-content;
+  }
+  .display-one{
+      height:50vh;
+      width:100%;
+      background:var(--main-blue) url('./images/bg-we-1.svg');
+      background-size:19em;
+      background-position:center;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      position:sticky;
+      z-index:3;
+  }
+  .display-two{
+        height:50vh;
+        width:100%;
+        background:var(--main-blue) url('./images/bg-we-2.svg');
+        background-size:19em;
+        background-position:center;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        position:relative;
+  }
+  .display-three{
+    height:50vh;
+    width:100%;
+    background:var(--dark-blue) url('./images/bg-we-3.svg');
+    background-size:19em;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position:relative;
+}
+.display-four{
+    height:50vh;
+    width:100%;
+    background:#fff url('./images/bg-we-4.svg');
+    background-size:19em;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position:relative;
+}
+.web-dev{
+    height:150vh;
+    width:100%;
+    background:#333;
+}
+
+.web-dev-intro{
+    background:#333 url('./images/web-dev-zoom.svg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    color:var(--dark-blue);
+    width:100%;
+    margin:0 auto;
+    padding:60px 20px;
+    text-align:center;
+    border-radius:35px;
+}
+.web-dev-display{
+    height:100vh;
+    width:100%;
+    background:#333 url('./images/laptop-1.svg');
+    background-attachment:fixed;
+    background-position:center;
+    background-size:50%;
+    background-repeat:no-repeat;
+    z-index:3;
+    position:relative;
+}
+
+.web-dev-display-2{
+    height:100vh;
+    width:100%;
+    background:#fff url('./images/laptop-2.svg');
+    background-attachment:fixed;
+    background-position:center;
+    background-size:50%;
+    background-repeat:no-repeat;
+    z-index:3;
+    position:relative;
+}
+  @media(max-width:1080px){
+    .narrator{
+        width:100%;
+        position:fixed;
+        top:130px;
+        left:50%;
+        transform:translateX(-50%);
+        transition:0.1s ease-in-out;
+    }
+    
+    .narrator-display{
+        width:100%;
+        height:100%;
+        margin:0 auto;
+        position:relative;
+        margin:0 auto;
+    }
+    .narrator-display > *{
+        width:8em;
+        height:8em;
+    }
+    .animation-one > *:nth-child(1){
+        left:12%;
+    }
+    .animation-one > *:nth-child(3){
+        left:88%;
+    }
+    .our-header h1{
+        font-size:2.5rem;
+        color:#fff;
+        text-align:center;
+        width:100%;
+        margin:0 auto;
+    }
+    .parallax{
+      width:100%;
+      height:fit-content;
+  }
+  .display-one{
+      height:50vh;
+      width:100%;
+      background:var(--main-blue) url('./images/bg-we-1.svg');
+      background-size:19em;
+      background-position:center;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      position:sticky;
+      z-index:3;
+  }
+  .display-two{
+        height:50vh;
+        width:100%;
+        background:var(--main-blue) url('./images/bg-we-2.svg');
+        background-size:19em;
+        background-position:center;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        position:relative;
+  }
+  .display-three{
+    height:50vh;
+    width:100%;
+    background:var(--dark-blue) url('./images/bg-we-3.svg');
+    background-size:19em;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position:relative;
+}
+.display-four{
+    height:50vh;
+    width:100%;
+    background:#fff url('./images/bg-we-4.svg');
+    background-size:19em;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position:relative;
+}
+.web-dev{
+    height:150vh;
+    width:100%;
+    background:#333;
+}
+
+.web-dev-intro{
+    background:#333 url('./images/web-dev-zoom.svg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    color:var(--dark-blue);
+    width:100%;
+    margin:0 auto;
+    padding:60px 20px;
+    text-align:center;
+    border-radius:35px;
+}
+.web-dev-display{
+    height:50vh;
+    width:100%;
+    background:#333 url('./images/laptop-1.svg');
+    background-attachment:fixed;
+    background-position:center;
+    background-size:100%;
+    background-repeat:no-repeat;
+    z-index:3;
+    position:relative;
+}
+
+.web-dev-display-2{
+    height:50vh;
+    width:100%;
+    background:#fff url('./images/laptop-2.svg');
+    background-attachment:fixed;
+    background-position:center;
+    background-size:100%;
+    background-repeat:no-repeat;
+    z-index:3;
+    position:relative;
+}
+
+  }
+  

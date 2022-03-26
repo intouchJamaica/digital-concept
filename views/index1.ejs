@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global_css.css">
+    <script src="https://kit.fontawesome.com/7be4f826c0.js" crossorigin="anonymous" defer></script>
+    <link rel="icon" href="https://digitaglobal.com/wp-content/uploads/2016/11/cropped-favicon-2-32x32.png" sizes="32x32">
+    <title>Designa Media Concept</title>
+</head>
+<body>
+    <%-include('./components/loader.ejs')-%>
+    <section class="header-one">
+        <%-include('./components/navbar.ejs')-%>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>We<br>
+                Build<br>
+            Brands</h1>
+                <p>We help to strengthen brand identities. Just like a fingerprint our mark is unique.<br><strong>Go Digita. Go Global</strong></p>
+            </div>
+        </div>
+        <svg class="scroll-ind" width="70" height="147" viewBox="0 0 70 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="arrow" d="M33.9393 146.061C34.5251 146.646 35.4749 146.646 36.0607 146.061L45.6066 136.515C46.1924 135.929 46.1924 134.979 45.6066 134.393C45.0208 133.808 44.0711 133.808 43.4853 134.393L35 142.879L26.5147 134.393C25.9289 133.808 24.9792 133.808 24.3934 134.393C23.8076 134.979 23.8076 135.929 24.3934 136.515L33.9393 146.061ZM33.5 90V145H36.5V90H33.5Z" fill="white"/>
+            <path d="M56.5571 49.8663C57.5809 50.1958 58.0913 51.3188 57.68 52.2958C57.2863 53.2263 56.2363 53.7017 55.2679 53.3867C47.635 50.8929 42.56 47.3375 39.8534 42.6154C39.3371 41.7171 39.655 40.5738 40.5621 40.0633C41.4692 39.5529 42.6242 39.8679 43.1375 40.7663C45.3834 44.6775 49.8021 47.6846 56.5571 49.8663V49.8663ZM31.5029 48.0842C29.0267 49.5163 24.8792 51.9196 16.2575 54.46C15.0617 54.8129 14.5163 56.1838 15.1434 57.2483C15.505 57.9163 16.3742 58.3333 17.2346 58.0796C25.1184 55.7667 29.4934 53.5383 32.2321 51.9925C34.9534 50.4583 35.2071 50.4321 37.7854 52.3133C40.2821 54.1392 44.523 56.7963 52.0596 59.5379C52.923 59.85 53.8417 59.465 54.2384 58.8117C54.9063 57.7908 54.4454 56.4171 53.2934 55.9971C44.3013 52.7187 40.3842 49.6212 38.4359 48.0783C35.91 46.0804 35.0642 46.0221 31.5029 48.0842V48.0842ZM30.7359 57.0325C28.875 57.9892 26.0692 59.43 21.2538 61.0954C20.6267 61.3113 20.16 61.8304 20.0142 62.4721C19.6992 63.8575 21.0146 65.1408 22.3184 64.6946C27.4867 62.9242 30.4938 61.3754 32.4742 60.3575C33.985 59.5788 34.9096 59.4213 36.6421 60.3546C38.8354 61.5329 42.2946 63.3938 47.1217 65.3275C48.4867 65.8758 49.8779 64.6683 49.6184 63.245C49.5017 62.6004 49.0613 62.0638 48.4488 61.8158C43.8463 59.9638 40.5417 58.1875 38.4417 57.0588C35.1371 55.2825 34.7521 54.9675 30.7359 57.0325V57.0325ZM28.7117 66.5117C28.0467 66.8208 27.6354 67.4946 27.6675 68.2208C27.7171 69.3496 28.7409 70 29.6888 70C29.9542 70 30.2167 69.9475 30.4471 69.8396C35.4054 67.5296 33.6846 67.3896 39.2759 69.8542C39.4975 69.9533 39.7454 70 40.005 70C40.9384 70 41.9796 69.3817 42.0409 68.2412C42.0817 67.4946 41.65 66.8033 40.9617 66.5C33.6817 63.3062 35.6329 63.3033 28.7117 66.5117V66.5117ZM35.5775 25.0775C35.9829 24.1237 35.5279 23.0242 34.5684 22.6246C33.6059 22.225 32.5004 22.6713 32.095 23.625C29.0092 30.9108 21.2129 36.5283 10.9404 39.0046C9.96336 39.2408 9.33336 40.1829 9.49669 41.1658C9.67169 42.2188 10.7129 42.91 11.7717 42.6563C21.8896 40.2267 31.5584 34.5683 35.5775 25.0775ZM37.4646 37.1408C39.8621 34.4225 41.7696 31.4096 43.1346 28.1838C44.5054 24.9433 44.2692 21.6767 42.4696 18.9875C40.5854 16.1758 37.1759 14.4288 33.5709 14.4288C31.535 14.4288 29.575 14.9887 27.9009 16.0475C26.0721 17.2083 24.6284 18.9496 23.7242 21.0817C21.8371 25.5354 16.8875 29.1171 10.15 31.0304C9.31003 31.2696 8.73544 32.0367 8.75003 32.9058C8.77044 34.1192 9.94586 34.9796 11.1213 34.6471C18.9963 32.4129 24.8704 28.0467 27.2067 22.5342C28.5017 19.4717 31.0625 18.1767 33.5709 18.1767C37.7359 18.1767 41.7667 21.7467 39.6521 26.7371C35.1925 37.2721 24.7479 44.0533 12.9442 47.0313C12.425 47.1625 11.9817 47.5038 11.7279 47.9733C11.4742 48.4429 11.4246 48.9971 11.5996 49.4988C11.9117 50.4029 12.8713 50.9133 13.8017 50.68C19.5884 49.2246 24.9404 46.9467 29.47 43.9892C32.5267 41.9913 35.2159 39.69 37.4646 37.1408V37.1408ZM20.4925 19.0575C21.3471 17.5963 22.1579 16.2167 23.5521 14.9333C26.8479 11.8971 31.3163 10.4329 35.8138 10.9113C40.0517 11.3633 43.7879 13.4838 46.0629 16.7242C49.213 21.2129 48.4225 25.6696 47.6584 29.9775C47.0021 33.6613 46.3284 37.4704 48.4255 40.8042C50.0092 43.3213 53.0075 45.2317 57.6917 46.655C58.6805 46.9554 59.7305 46.3692 59.9813 45.3746C60.235 44.3683 59.6517 43.3446 58.6513 43.0354C55.0171 41.9213 52.7013 40.5271 51.6309 38.8238C50.2979 36.7063 50.7996 33.8917 51.3771 30.6279C52.1909 26.0458 53.2 20.3438 49.1634 14.5863C46.2642 10.4533 41.5479 7.75833 36.2192 7.18958C30.6367 6.59167 25.0834 8.41458 20.9854 12.1917C19.1771 13.8512 18.1417 15.6158 17.2288 17.1733C15.7909 19.6233 14.5775 21.6825 10.4854 23.0213C9.83794 23.2342 9.32461 23.7825 9.21669 24.5962C9.04169 25.9379 10.3425 27.0083 11.6434 26.5854C17.1238 24.7946 18.83 21.8867 20.4925 19.0575V19.0575ZM14.4842 14.1283L15.6129 12.46C20.1309 5.99375 28.1138 2.82333 36.9717 3.97542C45.3892 5.07208 52.3017 9.84958 54.5796 16.1467C56.5979 21.7292 55.8017 26.2354 55.16 29.8579C54.6059 32.9846 54.1275 35.6883 55.8017 37.8554C56.4813 38.7363 57.4496 39.4158 58.7796 39.9263C59.888 40.3521 61.1013 39.62 61.2355 38.4533C61.3375 37.5725 60.8359 36.7325 60.0105 36.3913C59.4417 36.1579 59.0363 35.8867 58.7971 35.5775C58.1292 34.7171 58.4588 32.8562 58.8759 30.5054C59.5555 26.6612 60.4888 21.3967 58.1321 14.8808C54.8363 5.77208 44.2896 0 33.4746 0C26.2821 0 19.2996 2.5725 14.3617 8.00917C13.1163 9.40333 12.3492 10.4096 11.6054 12.1188C11.1184 13.2329 11.3079 14.0379 12.1246 14.5921C12.9267 15.1375 13.9534 14.9275 14.4842 14.1283Z" fill="white"/>
+        </svg>            
+    </section>
+    <section class="who-we-are">
+        <div class="who-we-are-body">
+            <div class="who-text">
+                <h2>We<br>
+                Are<br>
+            Unique</h2>
+            <div class="who-stats">
+                <div class="stat-card-one">
+                    <h4>146,791,482+</h4>
+                    <p>Campaign Reach</p>
+                </div>
+                <div class="stat-card-one">
+                    <h4>82+</h4>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-card-one">
+                    <h4>42+</h4>
+                    <p>Satisfied Clients</p>
+                </div>
+            </div>
+            </div>
+            <div class="services-one">
+                <div class="service-card">
+                    <img src="./images/web-dev.svg" alt="We offer web development">
+                    <h4>Web Development</h4>
+                    <p>We conceptualize, wire frame, and design modern websites. Our clients include individuals, corporations, and organizations seeking a detailed, clean, and functional approach to conveying their message.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/graphic.svg" alt="We offer graphic design">
+                    <h4>Graphic Design</h4>
+                    <p>Collectively our team has more than 10 years of design experience both as ideators and executors of ground-breaking design concepts. From logos, flyers to brochures, signs and billboards, we are your one stop shop for amazingly engaging visuals.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/digital-marketing.svg" alt="We offer digital marketing">
+                    <h4>Digital Marketing</h4>
+                    <p>Brands that take advantage of online marketing have reported as much as a 76% increase in both direct and indirect sales, as well as brand affinity! #TeamDigita offers winning digital solutions, inclusive of digital media marketing, strategy and content creation, and online advertising.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/content-create.svg" alt="We do content creation">
+                    <h4>Content Creation</h4>
+                    <p>Do you have an exciting idea that you want to bring to life? We’ve got the right mix of talent and creative skills to help you go from concept to reality. We have over 20 years experience creating rich and engaging visuals that help perfectly communicate your message.</p>
+               </div>
+            </div>
+            
+        </div>
+    </section>
+    <section class="our-work">
+        <svg class="work-ill" viewBox="0 0 348 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="3" width="174" height="28" fill="#1C5985"/>
+            <path d="M174 0L195.651 37.5H152.349L174 0Z" fill="white"/>
+            <path d="M40.9659 114.636C40.9659 119.078 40.1241 122.856 38.4403 125.972C36.7699 129.087 34.4896 131.467 31.5994 133.111C28.7225 134.741 25.4877 135.557 21.8949 135.557C18.2756 135.557 15.0275 134.735 12.1506 133.091C9.27367 131.447 7 129.067 5.32955 125.952C3.65909 122.836 2.82386 119.064 2.82386 114.636C2.82386 110.195 3.65909 106.417 5.32955 103.301C7 100.186 9.27367 97.8125 12.1506 96.1818C15.0275 94.5379 18.2756 93.7159 21.8949 93.7159C25.4877 93.7159 28.7225 94.5379 31.5994 96.1818C34.4896 97.8125 36.7699 100.186 38.4403 103.301C40.1241 106.417 40.9659 110.195 40.9659 114.636ZM32.2358 114.636C32.2358 111.759 31.8049 109.333 30.9432 107.358C30.0947 105.383 28.8949 103.884 27.3438 102.864C25.7926 101.843 23.9763 101.332 21.8949 101.332C19.8134 101.332 17.9972 101.843 16.446 102.864C14.8949 103.884 13.6884 105.383 12.8267 107.358C11.9782 109.333 11.554 111.759 11.554 114.636C11.554 117.513 11.9782 119.939 12.8267 121.915C13.6884 123.89 14.8949 125.388 16.446 126.409C17.9972 127.43 19.8134 127.94 21.8949 127.94C23.9763 127.94 25.7926 127.43 27.3438 126.409C28.8949 125.388 30.0947 123.89 30.9432 121.915C31.8049 119.939 32.2358 117.513 32.2358 114.636ZM66.7734 121.994V104.455H75.245V135H67.1115V129.452H66.7933C66.1039 131.241 64.9572 132.68 63.353 133.767C61.7621 134.854 59.8198 135.398 57.5263 135.398C55.4846 135.398 53.6882 134.934 52.1371 134.006C50.5859 133.078 49.3729 131.759 48.4979 130.048C47.6361 128.338 47.1986 126.29 47.1854 123.903V104.455H55.657V122.392C55.6702 124.195 56.1541 125.62 57.1087 126.668C58.0632 127.715 59.3426 128.239 60.9467 128.239C61.9676 128.239 62.9221 128.007 63.8104 127.543C64.6986 127.065 65.4145 126.363 65.9581 125.435C66.5149 124.507 66.7867 123.36 66.7734 121.994ZM82.0213 135V104.455H90.2344V109.784H90.5526C91.1094 107.888 92.044 106.456 93.3565 105.489C94.669 104.508 96.1804 104.017 97.8906 104.017C98.3149 104.017 98.7723 104.044 99.2628 104.097C99.7533 104.15 100.184 104.223 100.555 104.315V111.832C100.158 111.713 99.6075 111.607 98.9048 111.514C98.2022 111.421 97.5592 111.375 96.9759 111.375C95.7296 111.375 94.616 111.647 93.6349 112.19C92.6671 112.721 91.8982 113.463 91.3281 114.418C90.7713 115.372 90.4929 116.473 90.4929 117.719V135H82.0213Z" fill="#1C5985"/>
+            <path d="M155.707 135L144.054 94.2727H153.46L160.202 122.571H160.54L167.977 94.2727H176.031L183.449 122.631H183.807L190.548 94.2727H199.955L188.301 135H179.909L172.153 108.372H171.835L164.099 135H155.707ZM295.131 135V104.455H303.344V109.784H303.662C304.219 107.888 305.153 106.456 306.466 105.489C307.778 104.508 309.29 104.017 311 104.017C311.424 104.017 311.882 104.044 312.372 104.097C312.863 104.15 313.294 104.223 313.665 104.315V111.832C313.267 111.713 312.717 111.607 312.014 111.514C311.312 111.421 310.669 111.375 310.085 111.375C308.839 111.375 307.725 111.647 306.744 112.19C305.777 112.721 305.008 113.463 304.438 114.418C303.881 115.372 303.602 116.473 303.602 117.719V135H295.131ZM325.721 126.21L325.741 116.048H326.974L336.758 104.455H346.482L333.337 119.807H331.329L325.721 126.21ZM318.045 135V94.2727H326.516V135H318.045ZM337.136 135L328.147 121.696L333.795 115.71L347.059 135H337.136Z" fill="#1C5985"/>
+            <g clip-path="url(#clip0_14_188)">
+            <path d="M280.471 117.385C281.881 117.282 283.055 118.399 283.035 119.793C283.014 121.12 281.968 122.217 280.633 122.309C270.104 123.029 262.169 121.195 256.546 116.773C255.475 115.932 255.299 114.383 256.153 113.314C257.007 112.245 258.57 112.061 259.638 112.903C264.3 116.563 271.165 118.052 280.471 117.385ZM249.063 127.548C246.75 130.513 242.88 135.483 233.624 142.824C232.341 143.843 232.351 145.782 233.639 146.77C234.409 147.406 235.673 147.486 236.597 146.753C245.065 140.053 249.299 135.184 251.876 131.952C254.436 128.743 254.733 128.586 258.801 129.609C262.742 130.605 269.218 131.754 279.752 131.385C280.958 131.34 281.888 130.419 282.049 129.427C282.361 127.854 281.123 126.407 279.512 126.463C266.94 126.895 260.642 125.049 257.508 124.128C253.447 122.937 252.387 123.282 249.063 127.548ZM252.534 138.83C250.737 140.912 248.027 144.049 242.979 148.45C242.321 149.021 242.008 149.884 242.147 150.738C242.445 152.581 244.68 153.497 246.049 152.311C251.475 147.609 254.377 144.242 256.289 142.026C257.747 140.333 258.796 139.686 261.367 139.971C264.619 140.327 269.751 140.891 276.585 140.871C278.518 140.867 279.619 138.711 278.602 137.104C278.143 136.376 277.342 135.939 276.473 135.938C269.953 135.947 265.052 135.41 261.937 135.068C257.035 134.531 256.411 134.337 252.534 138.83ZM254.734 151.378C254.076 152.082 253.906 153.106 254.303 153.975C254.919 155.326 256.487 155.614 257.642 155.148C257.966 155.017 258.26 154.824 258.487 154.579C263.392 149.323 261.226 149.999 269.253 150.25C269.572 150.262 269.897 150.197 270.213 150.069C271.351 149.609 272.315 148.343 271.828 146.923C271.51 145.993 270.644 145.363 269.656 145.333C259.212 145.025 261.589 144.061 254.734 151.378ZM242.701 97.5067C242.725 96.1448 241.63 95.0289 240.263 95.0144C238.894 95.0014 237.767 96.0894 237.742 97.4513C237.569 107.849 230.834 118.533 219.535 126.608C218.461 127.377 218.157 128.835 218.84 129.952C219.572 131.149 221.181 131.479 222.346 130.648C233.48 122.706 242.476 111.051 242.701 97.5067ZM250.94 111.278C252.523 106.785 253.364 102.174 253.439 97.5712C253.514 92.9476 251.618 89.0832 248.101 86.6922C244.421 84.1936 239.406 83.7433 235.013 85.5182C232.532 86.5206 230.419 88.1679 228.9 90.2824C227.243 92.5973 226.341 95.43 226.289 98.4733C226.183 104.83 221.914 111.631 214.646 117.28C213.74 117.985 213.418 119.202 213.864 120.254C214.486 121.723 216.342 122.193 217.61 121.209C226.107 114.609 231.115 106.396 231.248 98.5287C231.318 94.1592 233.801 91.3203 236.858 90.0854C241.933 88.0348 248.603 90.4006 248.483 97.5229C248.236 112.556 238.847 125.962 225.929 135.402C225.361 135.818 224.989 136.452 224.911 137.149C224.833 137.846 225.045 138.546 225.505 139.071C226.331 140.019 227.751 140.169 228.77 139.427C235.105 134.804 240.506 129.393 244.569 123.559C247.311 119.62 249.455 115.491 250.94 111.278ZM221.355 97.5977C221.677 95.3963 221.985 93.316 223.053 91.0657C225.574 85.7431 230.298 81.759 236.014 80.1276C241.401 78.592 246.998 79.3364 251.366 82.165C257.414 86.0841 258.645 91.9041 259.835 97.5299C260.849 102.342 261.903 107.315 266.1 110.345C269.269 112.633 273.864 113.485 280.272 112.913C281.625 112.792 282.616 111.561 282.432 110.225C282.246 108.874 281.031 107.914 279.66 108.03C274.683 108.461 271.174 107.903 269.031 106.354C266.364 104.43 265.59 100.753 264.687 96.4916C263.422 90.5073 261.845 83.0619 254.091 78.0333C248.523 74.4244 241.449 73.4623 234.676 75.3928C227.579 77.4127 221.709 82.3682 218.575 88.9885C217.188 91.9011 216.796 94.5612 216.45 96.9086C215.904 100.602 215.439 103.709 211.112 107.355C210.428 107.933 210.072 108.854 210.341 109.899C210.788 111.62 212.901 112.284 214.278 111.128C220.074 106.247 220.722 101.864 221.355 97.5977ZM211.606 94.5493L212.16 91.9605C214.482 81.8565 222.649 74.0628 234.01 71.1056C244.808 68.2977 255.583 70.7162 261.46 77.2682C266.668 83.0773 267.916 88.9605 268.917 93.6908C269.782 97.7737 270.53 101.304 273.637 103.12C274.899 103.859 276.413 104.211 278.285 104.178C279.846 104.151 280.964 102.662 280.553 101.174C280.243 100.05 279.219 99.2736 278.045 99.2641C277.237 99.2598 276.609 99.1289 276.166 98.8699C274.928 98.1502 274.413 95.7204 273.764 92.6503C272.7 87.6313 271.245 80.7565 265.165 73.9766C256.664 64.4995 240.971 62.6583 227.792 67.983C219.027 71.5241 211.785 78.0967 208.444 87.1529C207.613 89.4649 207.174 91.0688 207.109 93.5178C207.064 95.1153 207.691 96.0029 208.959 96.2761C210.205 96.5459 211.353 95.7845 211.606 94.5493Z" fill="#4AB3FF" fill-opacity="0.53"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_14_188">
+            <rect width="92" height="92" fill="white" transform="translate(187 84.4639) rotate(-22)"/>
+            </clipPath>
+            </defs>
+        </svg>
+        <div class="work-display">
+            <div class="six-grid">
+                <div class="project-one">
+                </div>
+                <div class="project-two">
+                </div>
+                <div class="project-three">
+                </div>
+                <div class="project-four">
+                </div>
+                <div class="project-five"></div>
+                <div class="project-six"></div>
+            </div>
+            <div class="tri-grid">
+                <div class="main-display"></div>
+                <div class="duo-grid">
+                    <div class="d-g-p-1"></div>
+                    <div class="d-g-p-2"></div>
+                </div>
+            </div>
+        </div>
+            
+    </section>
+    <section class="develop-talent">
+        <div class="dev-talent-body">
+            <h2>We<br>Develop<br>Talent</h2>
+            <div class="blogs">
+                <div class="blog">
+                    <img src="./images/blog1.jpg" alt="Blog by Example">
+                    <h4>5 Reasons Your Business Needs Digital Marketing</h4>
+                    <p>By Digita Team</p>
+                    <a href="https://digitaglobal.com/5-reasons-your-business-needs-digital-marketing/" target="_blank">5 min. read...</a>
+                </div>
+                <div class="blog">
+                    <img src="./images/blog2.jpg" alt="Blog by Example">
+                    <h4>4 Digital Marketing Trends to look forward to</h4>
+                    <p>By Kemal Brown</p>
+                    <a href="https://digitaglobal.com/4-digital-marketing-trends-to-look-forward-to-in-2021/" target="_blank">5 min. read...</a>
+                </div>
+                <div class="blog">
+                    <img src="./images/blog3.jpg" alt="Blog by Example">
+                    <h4>5 Strategies to drive sales using Social Media</h4>
+                    <p>By Kemal Brown</p>
+                    <a href="https://digitaglobal.com/drive-sales-using-social-media/" target="_blank">5 min. read...</a>
+                </div>
+                <div class="blog">
+                    <img src="./images/blog4.jpg" alt="Blog by Example">
+                    <h4>The ABC's of Social Media Reporting</h4>
+                    <p>By Digita Team</p>
+                    <a href="https://digitaglobal.com/the-abc-of-social-media-reporting/" target="_blank">5 min. read...</a>
+
+                </div>
+                <div class="blog">
+                    <img src="./images/blog1.jpg" alt="Blog by Example">
+                    <h4>5 Reasons Your Business Needs Digital Marketing</h4>
+                    <p>By Digita Team</p>
+                    <a href="https://digitaglobal.com/5-reasons-your-business-needs-digital-marketing/" target="_blank">5 min. read...</a>
+                </div>
+                <div class="blog">
+                    <img src="./images/blog2.jpg" alt="Blog by Example">
+                    <h4>4 Digital Marketing Trends to look forward to</h4>
+                    <p>By Kemal Brown</p>
+                    <a href="https://digitaglobal.com/4-digital-marketing-trends-to-look-forward-to-in-2021/" target="_blank">5 min. read...</a>
+                </div>
+                <div class="blog">
+                    <img src="./images/blog3.jpg" alt="Blog by Example">
+                    <h4>5 Strategies to drive sales using Social Media</h4>
+                    <p>By Kemal Brown</p>
+                    <a href="https://digitaglobal.com/drive-sales-using-social-media/">5 min. read...</a>
+                </div>
+                <div class="blog">
+                    <img src="./images/blog4.jpg" alt="Blog by Example">
+                    <h4>The ABC's of Social Media Reporting</h4>
+                    <p>By Digita Team</p>
+                    <a href="https://digitaglobal.com/the-abc-of-social-media-reporting/">5 min. read...</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="indicators">
+            <i class="fa-solid fa-chevron-left" id="scroll-left"></i>
+            <i class="fa-solid fa-chevron-right" id="scroll-right"></i>
+        </div>           
+    </section>
+    <section class="we-can-help-you">
+        <div class="we-can-header">
+            <h2>We Can Help You</h2>
+            <div class="upsell-skills">
+                <div class="upsell-card">
+                    <img src="./images/increase-sales.svg" alt="Increase your sales">
+                    <p>Increase your sales</p>
+                </div>
+                <div class="upsell-card">
+                    <img src="./images/increase-presence.svg" alt="Increase your presence">
+                    <p>Increase your presence</p>
+                </div>
+                <div class="upsell-card">
+                    <img src="./images/increase-brand.svg" alt="Increase your brand awareness">
+                    <p>Increase your brand awareness</p>
+                </div>
+            </div>
+        </div>
+        <div class="we-can-body">
+            <h2>Ready to turn idea into reality ?</h2>
+            <button type="button">Get an estimate</button>
+        </div>
+        <div class="we-can-foot">
+            <div class="contact-info">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="#">engage@digitalglobal.com</a>
+            </div>
+            <div class="contact-info">
+                <i class="fa-solid fa-phone"></i>
+                <a href="#">(876)891-9927</a>
+            </div>
+            <div class="contact-info">
+                <i class="fa-solid fa-location-pin"></i>
+                <a href="#">Kingston, Jamaica</a>
+            </div>
+        </div>
+    </section>
+   <%-include('./components/footer.ejs')-%>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script>
+    const we_section = document.querySelector('.we-can-help-you')
+    const we_options = {
+        root_margin:'0px',
+        threshold:1
+    }
+    const we_help = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if(entry.isIntersecting){
+                $('nav').css('background','transparent')
+            }else{
+                $('nav').css('background','var(--main-blue)')
+            }
+        })
+    },we_options)
+    we_help.observe(we_section)
+
+
+
+    $(document).ready(()=>{
+        $('.menu-button').on('click', ()=>{
+            $('.nav-menu').toggleClass('vertical-menu-open')
+        })
+
+        $('#closeMenu').on('click', ()=>{
+            $('.nav-menu').toggleClass('vertical-menu-open')
+        })
+
+        $('#who-we-are').on('click',()=>{
+            $('#who-we-are-sub').addClass('show-sub-menu')
+        }).on('mouseover', ()=>{
+            $('#who-we-are-sub').addClass('show-sub-menu') 
+        })
+
+        $('#who-we-are-sub').on('mouseleave', ()=>{
+            $('#who-we-are-sub').removeClass('show-sub-menu') 
+        })
+
+        $('#services').on('click',()=>{
+            $('#services-sub').addClass('show-sub-menu')
+        }).on('mouseover', ()=>{
+            $('#services-sub').addClass('show-sub-menu') 
+        })
+
+        $('#services-sub').on('mouseleave', ()=>{
+            $('#services-sub').removeClass('show-sub-menu') 
+        })
+
+        $('.closeSubMenu').on('click', (e)=>{
+            var $targ = $(e.currentTarget).parent();
+            $targ.removeClass('show-sub-menu')
+        })
+
+        var autoScroll;
+
+        $('#scroll-left').on('click', ()=>{
+            var currPos = $('.blogs').scrollLeft();
+            var newPos = currPos -= 120;
+            $('.blogs').scrollLeft(newPos)
+        })
+
+        $('#scroll-right').on('click', ()=>{
+            var currPos = $('.blogs').scrollLeft();
+            var newPos = currPos += 120;
+            $('.blogs').scrollLeft(newPos)
+        })
+        $(window).on('load', ()=>{
+            setTimeout(()=>{
+                $('.loader').fadeOut()
+            },3000)
+        })
+    })
+</script>
+</html>
