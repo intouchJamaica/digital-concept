@@ -1,4 +1,9 @@
-const port = 5000;
+if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config() 
+}
+
+
+const port = process.env.PORT;
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -32,5 +37,4 @@ app.get('/ourwork', (req,res)=>{
     res.render('./ourwork.ejs')
 })
 
-console.log(`port open on ${port}`)
 app.listen(port); 
