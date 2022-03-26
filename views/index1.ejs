@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4AB3FF">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="global_css.css">
     <script src="https://kit.fontawesome.com/7be4f826c0.js" crossorigin="anonymous" defer></script>
     <link rel="icon" href="https://digitaglobal.com/wp-content/uploads/2016/11/cropped-favicon-2-32x32.png" sizes="32x32">
+    <script src="generate-sw.js" defer></script>
+    <link rel="manifest" href="/manifest/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/manifest/maskable_icon_x192.png">
     <title>Designa Media Concept</title>
 </head>
 <body>
@@ -37,15 +41,15 @@
             Unique</h2>
             <div class="who-stats">
                 <div class="stat-card-one">
-                    <h4>146,791,482+</h4>
+                    <h4 id="campaign-stat"></h4>
                     <p>Campaign Reach</p>
                 </div>
                 <div class="stat-card-one">
-                    <h4>82+</h4>
+                    <h4 id="project-stat"></h4>
                     <p>Projects Completed</p>
                 </div>
                 <div class="stat-card-one">
-                    <h4>42+</h4>
+                    <h4 id="client-stat"></h4>
                     <p>Satisfied Clients</p>
                 </div>
             </div>
@@ -211,14 +215,47 @@
             </div>
         </div>
     </section>
+    <div class="pwa-prompt" style="height:60%">
+        <h3>Progressive Web App</h3>
+        <p>This app can function as a progressive web app.To enjoy this experience install below.</p>
+        <button type="button" id="installAppButton">Install</button>
+    </div>
    <%-include('./components/footer.ejs')-%>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script>
-    const we_section = document.querySelector('.we-can-help-you')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('generate-sw.js',{
+      scope:"http://localhost:5000/"
+  })
+  .then(function(registration) {
+    console.log('Registration successful, scope is:', registration.scope);
+  })
+  .catch(function(error) {
+    console.log('Service worker registration failed, error:', error);
+  });
+}
     const we_options = {
-        root_margin:'0px',
-        threshold:1
+        threshold:0.3
     }
+    let pageProgress = {
+        stat:0
+    }
+    const we_are = document.querySelector('.who-we-are');
+    const we_Observe = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if(entry.isIntersecting){
+                if(pageProgress.stat < 1){
+                    pageProgress.stat = 1;
+                    incremIncrease()
+                    console.log('run')
+                }
+            }
+        })
+    },we_options)
+    we_Observe.observe(we_are)
+
+    const we_section = document.querySelector('.we-can-help-you')
     const we_help = new IntersectionObserver((entries)=>{
         entries.forEach((entry)=>{
             if(entry.isIntersecting){
@@ -228,9 +265,49 @@
             }
         })
     },we_options)
-    we_help.observe(we_section)
-
-
+    we_help.observe(we_section);
+    var end_values = [
+            {
+                id:"campaign-stat",
+                base_string:'146,791',
+                rem_number:146791482
+            },
+            {
+                id:"project-stat",
+                base_string:'60',
+                number:82,
+            },
+            {
+                id:"client-stat",
+                base_string:'22',
+                number:42
+            }
+        ]
+    const incremIncrease = ()=>{
+        end_values.forEach((end)=>{
+            var int
+            var elem = document.getElementById(end.id);
+            var increm = 0
+            var set;
+            if(end.rem_number > 100){
+                int = setInterval(()=>{
+                    increm += 30
+                    if(increm >= 483){clearInterval(int)}
+                    else{
+                        set =increm >= 480 ? `${end.base_string},${increm}+` : `${end.base_string},${increm}`
+                        elem.textContent = set
+                    }
+                },100)
+            }else{
+                int= setInterval(()=>{
+                    if(increm >= end.number){clearInterval(int)}
+                    increm += Math.floor(Math.random()*2);
+                    elem.textContent = increm + '+'
+                },20)
+            }
+        })
+    }
+    let deferredPrompt
 
     $(document).ready(()=>{
         $('.menu-button').on('click', ()=>{
@@ -279,10 +356,21 @@
             var newPos = currPos += 120;
             $('.blogs').scrollLeft(newPos)
         })
+        $('#installAppButton').on('click', async()=>{
+            if(deferredPrompt !== null){
+                deferredPrompt.prompt;
+                const outcome  = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {deferredPrompt = null}
+            }else{
+
+            }
+        })
         $(window).on('load', ()=>{
             setTimeout(()=>{
                 $('.loader').fadeOut()
             },3000)
+        }).on('beforeinstallprompt', (e)=>{
+            deferredPrompt = e
         })
     })
 </script>
