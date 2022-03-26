@@ -25,7 +25,7 @@ html{
     background:var(--main-blue);
     z-index:99;
 }
-.min_width{
+.min_width,.pwa-prompt{
     position:fixed;
     top:50%;
     left:50%;
@@ -37,18 +37,19 @@ html{
     border-radius:8px;
     border:1px solid #4AB3FF;
     display:none;
-    justify-content:flex-start;
+    justify-content:space-between;
     flex-direction:column;
     align-items: center;
     gap:50px;
     padding:20px 10px;
     box-shadow:20px 20px 2000px 20px rgba(0,0,0,0.3);
 }
-.min_width h3{
+.min_width h3,.pwa-prompt{
     text-align:center;
 
 }
-.ok-button{
+
+.ok-button,.pwa-prompt button{
     padding:14px 22px;
     border-radius:6px;
     background:#4AB3FF;
@@ -58,7 +59,7 @@ html{
     outline:none;
     cursor:pointer;
 }
-.ok-button:hover{
+.ok-button:hover,.pwa-prompt button:hover{
     font-weight:600;
 }
 .content {
