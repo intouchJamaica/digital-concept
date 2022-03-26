@@ -11,6 +11,10 @@
     <link rel="icon" href="https://digitaglobal.com/wp-content/uploads/2016/11/cropped-favicon-2-32x32.png" sizes="32x32">
     <link rel="stylesheet" href="global_css.css">
     <link rel="stylesheet" href="ourwork.css">
+    <script src="generate-sw.js" defer></script>
+    <link rel="manifest" href="/manifest/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/manifest/maskable_icon_x192.png">
+
     <script src="./ourwork.js" defer></script>
     <title>Designa Media Concept</title>
 </head>
@@ -92,10 +96,26 @@
         <p>Your device is too small for this excercise and hence this may affect the appearance. Please view on a larger device for a better experience.</p>
         <button type="button" class="ok-button" id="ok-button">Continue</button>
     </div>
+    <div class="pwa-prompt">
+        <h3>Progressive Web App</h3>
+        <p>This app can function as a progressive web app.To enjoy this experience install below.</p>
+        <button type="button" id="installAppButton">Install</button>
+    </div>
     <%-include('./components/footer.ejs')-%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+        if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('generate-sw.js',{
+      scope:"http://localhost:5000/"
+  })
+  .then(function(registration) {
+    console.log('Registration successful, scope is:', registration.scope);
+  })
+  .catch(function(error) {
+    console.log('Service worker registration failed, error:', error);
+  });
+}
     $(document).ready(()=>{
         $('.menu-button').on('click', ()=>{
             $('.nav-menu').toggleClass('vertical-menu-open')
