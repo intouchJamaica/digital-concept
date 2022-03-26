@@ -226,7 +226,7 @@
 <script>
     if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('generate-sw.js',{
-      scope:"http://localhost:5000/"
+      scope:"https://digita-concept.herokuapp.com/"
   })
   .then(function(registration) {
     console.log('Registration successful, scope is:', registration.scope);
